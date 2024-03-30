@@ -10,8 +10,8 @@ var filename string
 
 var rootCmd = &cobra.Command{
 	Use:   "goscraper",
-	Short: "'goscraper' is a CLI tool to scrape a website and save the data to a CSV file.",
-	Long:  `'goscraper' is a CLI tool to scrape a website and save the data to a CSV file.`,
+	Short: "'goscraper' is a CLI tool to scrape a website and output the data to the terminal",
+	Long:  "'goscraper' is a CLI tool to scrape a website and output the data to the terminal",
 }
 
 func Execute() {

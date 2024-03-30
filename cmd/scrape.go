@@ -15,8 +15,8 @@ var maxArticles int
 
 var scrapeCmd = &cobra.Command{
 	Use:   "scrape",
-	Short: "scrape a website and save the data to a CSV file",
-	Long:  "scrape a website and save the data to a CSV file",
+	Short: "scrape a website and output the data to the terminal",
+	Long:  "scrape a website and output the data to the terminal",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		// Scrape the website
 		resp, err := http.Get(zennURL)
