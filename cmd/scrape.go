@@ -6,6 +6,7 @@ import (
 	"net/url"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
 
@@ -43,7 +44,7 @@ var scrapeCmd = &cobra.Command{
 			title := s.Find("h2").Text()
 			articleUrl, _ := s.Attr("href")
 			articleUrl, _ = url.JoinPath(zennURL, articleUrl)
-			fmt.Printf("%d: Title: %s\nURL: %s\n\n", i+1, title, articleUrl)
+			fmt.Printf("・%s\n(%s)\n\n", title, color.HiGreenString(articleUrl))
 		})
 
 		return nil
